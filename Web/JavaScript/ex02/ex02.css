@@ -1,0 +1,17 @@
+.menu{
+  display: flex;
+  font-size: 2em;
+  margin: 0.5em;
+
+}
+.menu-link{
+  margin: 0.5em;
+  padding: 0.2em;
+  background: dodgerblue;
+  border-radius: 5%;
+  color: #fff;
+  text-decoration: none;
+}
+.menu-active{
+  background: rgb(110, 110, 100);
+}
