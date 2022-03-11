@@ -28,5 +28,5 @@
           top:50%;  /* 위쪽에서 50% 부터 */
           left:50%;  /* 왼쪽에서 50% 부터 */
           transform:translate(-50%, -50%);  /* 요소를 화면 중앙에 표시하기 위해 이동 */
-          border:5px solid #eee; /* 이미지 테두리 */       
+          border:5px solid #eee; /* 이미지 테두리 */  
         }

@@ -6,7 +6,3 @@ const createDate = {
   day: "numeric",
   year:"numeric"
 };
-
-const today = new Date();
-addDate.innerHTML = today.toLocaleDateString('en-Us',createDate);
-
