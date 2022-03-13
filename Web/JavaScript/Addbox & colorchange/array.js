@@ -5,8 +5,7 @@ let boxAdd = document.querySelector('.boxAdd');
 btnBox.addEventListener('click',boxCreate);
 function boxCreate(){
   let newDiv = document.createElement('div');
-  newDiv.classList.add('box-shadow');
-  boxAdd.appendChild(newDiv)
+  boxAdd.appendChild(newDiv).classList.add('box-shadow');
 }
 
 // 색상변경하기

@@ -5,13 +5,12 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
 form.addEventListener('submit', e => {
-	e.preventDefault();
-	
+	e.preventDefault();	
 	checkInputs();
 });
 
 function checkInputs() {
-	// trim to remove the whitespaces
+	// trim to remove the whitespaces(빈공간을 없앤다.)
 	const usernameValue = username.value.trim();
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
