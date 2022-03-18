@@ -1,3 +1,4 @@
+const wrap = document.querySelector('.wrap');
 let counter = 0
 const listner = () => {
   header.innerText =  `클릭횟수 : ${++counter}`
@@ -26,7 +27,8 @@ disconnectButton.addEventListener('click', () =>{
   p.innerText = '연결 상태 : 해제'
 })
 
-document.body.appendChild(header)
-document.body.appendChild(connectButton)
-document.body.appendChild(disconnectButton)
-document.body.appendChild(p)
+
+wrap.appendChild(header)
+wrap.appendChild(connectButton)
+wrap.appendChild(disconnectButton)
+wrap.appendChild(p)
