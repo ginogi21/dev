@@ -1,0 +1,67 @@
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 100px;
+  border: 1px solid darkgray;
+}
+
+div::before{
+  content: "New!";
+  font-size: 0.5em;
+  color: red;
+  display: block;
+  clear: both;
+  margin-right: 10px;
+  transform: translateY(5px)
+}
+
+div::after{
+  content: "On Sales!";
+  font-size: 1.5em;
+  color: blue;
+  display:inline-block;
+  transform: rotate(25deg);
+}
+
+p{
+  width: 500px;
+  margin-left: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+p:hover::after{  
+  content: "전화번호 010 322 3333";
+  display: inline-flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  border-top-left-radius: 40px;
+  background-color: rgb(148, 231, 14);
+  font-size: 0.8em;
+  color: blueviolet;
+  right: 100px;
+  top: -10px;
+}
+
+p:hover::before{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  left: -10px;
+}

@@ -33,6 +33,9 @@ a{
 a:nth-child(2){
   background: linear-gradient(90deg, #755bea, #ff72c0);
 }
+a:nth-child(3){
+  background: linear-gradient(90deg, #5bea7a, #d6b14b);
+}
 
 span{
   position: absolute;
