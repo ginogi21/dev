@@ -1,0 +1,54 @@
+:root{
+  --bg-color:#3d0ae2;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.35;
+}
+
+table{
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.card{
+  max-width: 50rem;
+  background-color:#a9adad;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, .25);
+}
+
+a{
+  color: var(--bg-color);
+}
+
+td, th{
+  padding: 0.8rem;
+}
+
+img{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.btn{
+  width: 7rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--bg-color);
+  display: inline-block;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn.inverse{
+  background-color: #fff;
+  color: var(--bg-color);
+}

@@ -5,16 +5,16 @@ div{
   
 }
 
+.show{
+  width: 100px;
+  height: 50px;
+  border: 1px solid gray;
+}
+
 .show:nth-child(odd){
   background-color: beige;
 }
 
 .show:nth-child(even){
   background-color: blue;
-}
-
-.show{
-  width: 100px;
-  height: 50px;
-  border: 1px solid gray;
 }

@@ -10,7 +10,7 @@ function addBox(){
   div.appendChild(newDiv).classList.add('show');  
 }
 
-const shows = document.querySelectorAll('.show');
+/* const shows = document.querySelectorAll('.show'); */
 
 deleteBtn.addEventListener('click',()=>{
   div.removeChild(div.lastChild);
