@@ -13,89 +13,57 @@
   --main-color-dark: #3651d4;
   --main-color-light: #5872f5;
   --text-color: #cfcde7;
+  --bg-color:#e4e2f5;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  background-color: #e4e2f5;
-  min-height: 100vh;
+body{
+  background-color: var(--bg-color);
   display: flex;
   position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-a {
+a{
   text-decoration: none;
 }
 
-ul {
+ul{
   list-style: none;
 }
 
-nav {
+.nav{
   position: sticky;
   top: 0;
   left: 0;
   height: 100vh;
   background-color: var(--main-color);
   width: 16rem;
-  padding: 1.8rem 0.85rem;
-  color: #fff;
+  padding:1.8rem 0.85rem ;
   display: flex;
   flex-direction: column;
   transition: width 0.5s ease-in-out;
 }
 
-nav::before {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  height: 100%;
-  top: 0;
-  left: 100%;
-}
-
-main {
-  flex: 1;
-  padding: 2rem; 
-  color: #1f2027;
+.nav-top{
   display: flex;
-  flex-direction: column;
-}
-
-main h1 {
-  margin-bottom: 1rem;
-}
-
-main .copyright {
-  margin-top: auto;
-  font-size: 0.9rem;
-}
-
-main .copyright span {
-  color: var(--main-color);
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.sidebar-top {
   position: relative;
-  display: flex;
   align-items: center;
 }
 
-.sidebar-top .logo {
+.nav-top .logo{
   width: 3rem;
   margin: 0 0.8rem;
 }
 
-.sidebar-top h3 {
+.nav-top h3{
   padding-left: 0.5rem;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
-.shrink-btn {
+.shrink-btn{
   position: absolute;
   top: 50%;
   height: 27px;
@@ -107,27 +75,27 @@ main .copyright span {
   right: -2.65rem;
   transform: translateY(-50%) translateX(-8px);
   opacity: 0;
-  pointer-events: none;
+/*   pointer-events:none; */
   transition: 0.3s;
 }
 
-.shrink-btn i {
+.shrink-btn i{
   line-height: 27px;
   transition: 0.3s;
 }
 
-.shrink-btn:hover {
+.shrink-btn:hover{
   background-color: var(--main-color-dark);
 }
 
-nav:hover .shrink-btn,
-.shrink-btn.hovered {
+.nav:hover .shrink-btn,
+.shrink-btn.hovered{
   transform: translateY(-50%) translateX(0px);
   opacity: 1;
   pointer-events: all;
 }
 
-.search {
+.nav-search{
   min-height: 2.7rem;
   background-color: var(--main-color-light);
   margin: 2rem 0.5rem 1.7rem;
@@ -139,7 +107,7 @@ nav:hover .shrink-btn,
   cursor: pointer;
 }
 
-.search input {
+.nav-search input{
   height: 100%;
   border: none;
   background: none;
@@ -149,20 +117,20 @@ nav:hover .shrink-btn,
   font-family: inherit;
 }
 
-.search input::placeholder {
+.nav-search input::placeholder{
   color: var(--text-color);
 }
 
-.sidebar-links ul {
+.nav-links ul{
   position: relative;
 }
 
-.sidebar-links li {
+.nav-links li{
   position: relative;
   padding: 2.5px 0;
 }
 
-.sidebar-links a {
+.nav-links a{
   color: var(--text-color);
   font-weight: 400;
   font-size: 0.9rem;
@@ -171,7 +139,7 @@ nav:hover .shrink-btn,
   height: 53px;
 }
 
-.icon {
+.icon{
   font-size: 1.3rem;
   text-align: center;
   min-width: 3.7rem;
@@ -180,35 +148,35 @@ nav:hover .shrink-btn,
   grid-template-rows: 1fr;
 }
 
-.icon i {
+.icon i{
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   transition: 0.3s;
 }
 
-.icon i:last-child {
+.icon i:last-child{
   opacity: 0;
   color: #fff;
 }
 
-.sidebar-links a.active,
-.sidebar-links a:hover {
+.nav-links a.active,
+.nav-links a:hover{
   color: #fff;
 }
 
-.sidebar-links a .link {
+.nav-links a .link{
   transition: opacity 0.3s 0.2s, color 0.3s;
 }
 
-.sidebar-links a.active i:first-child {
+.nav-links a.active i:first-child{
   opacity: 0;
-}
 
-.sidebar-links a.active i:last-child {
+}
+.nav-links a.active i:last-child{
   opacity: 1;
 }
 
-.active-tab {
+.active-tab{
   width: 100%;
   height: 53px;
   background-color: var(--main-color-dark);
@@ -219,7 +187,7 @@ nav:hover .shrink-btn,
   transition: top 0.3s;
 }
 
-.sidebar-links h4 {
+.nav-links h4{
   position: relative;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -232,12 +200,12 @@ nav:hover .shrink-btn,
   transition: opacity 0.3s 0.2s, height 0.5s 0s;
 }
 
-.sidebar-footer {
+.nav-footer{
   position: relative;
   margin-top: auto;
 }
 
-.account {
+.account{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,16 +218,16 @@ nav:hover .shrink-btn,
   transition: opacity 0.3s 0s, color 0.3s 0s;
 }
 
-.account:hover {
+.account:hover{
   color: #fff;
 }
 
-.admin-user {
+.admin-user{
   display: flex;
   align-items: center;
 }
 
-.admin-profile {
+.admin-profile{
   white-space: nowrap;
   max-width: 100%;
   transition: opacity 0.3s 0.2s, max-width 0.7s 0s ease-in-out;
@@ -269,23 +237,23 @@ nav:hover .shrink-btn,
   overflow: hidden;
 }
 
-.admin-user img {
+.admin-user img{
   width: 2.8rem;
   border-radius: 50%;
   margin: 0 0.4rem;
 }
 
-.admin-info {
+.admin-info{
   padding-left: 0.3rem;
 }
 
-.admin-info h3 {
+.admin-info h3{
   font-weight: 500;
   font-size: 1rem;
   line-height: 1;
 }
 
-.admin-info h5 {
+.admin-info h5{
   font-weight: 400;
   font-size: 0.75rem;
   color: var(--text-color);
@@ -293,7 +261,7 @@ nav:hover .shrink-btn,
   line-height: 1;
 }
 
-.log-out {
+.log-out{
   display: flex;
   height: 40px;
   min-width: 2.4rem;
@@ -307,59 +275,57 @@ nav:hover .shrink-btn,
   transition: color 0.3s;
 }
 
-.log-out:hover {
+.log-out:hover{
   color: #fff;
 }
 
-.tooltip {
+.tooltip{
   background-color: var(--main-color);
   position: absolute;
   right: -1.2rem;
   top: 0;
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(100%) translateY(50%);
   padding: 0 0.8rem;
   font-size: 0.85rem;
-  display: none;
+  display:none;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   height: 30px;
   align-items: center;
   border-radius: 7px;
   box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   transition: all 0.3s;
   text-align: center;
   white-space: nowrap;
 }
 
-.tooltip span {
+.tooltip span{
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   opacity: 0;
   transition: 0.3s;
 }
 
-.tooltip span.show {
+.tooltip span.show{
   opacity: 1;
 }
 
-.tooltip-element:hover ~ .tooltip {
+.tooltip-element:hover ~ .tooltip{
   opacity: 1;
   pointer-events: all;
 }
 
-/* When the menu shrinks */
-
-.hide {
+.hide{
   transition: opacity 0.3s 0.2s;
 }
 
-body.shrink nav {
+body.shrink .nav{
   width: 5.4rem;
 }
 
-body.shrink .hide {
+body.shrink .hide{
   opacity: 0;
   pointer-events: none;
   transition-delay: 0s;

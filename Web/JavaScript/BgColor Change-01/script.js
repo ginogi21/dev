@@ -1,4 +1,4 @@
-const bodyColor = document.querySelector('body');
+const bodyColor = document.body;
 const chageColorBtn = document.querySelector('#btn');
 
 chageColorBtn.addEventListener('click',()=>{
