@@ -1,5 +1,4 @@
 const menuLinks = document.querySelectorAll('.menu-link');
-console.log(menuLinks)
 let currentMenu;
 
 menuLinks.forEach((elem)=>{
