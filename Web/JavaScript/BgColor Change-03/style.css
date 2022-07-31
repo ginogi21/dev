@@ -5,6 +5,7 @@
   border-radius: 10px;
   color: #fff;
   font-size: large;
-  background-color: rgb(73, 67, 67);
+  background-color: transparent;
+  color: rgb(136, 110, 110);
   outline: none;
 }

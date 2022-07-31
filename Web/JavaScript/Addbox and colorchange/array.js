@@ -12,7 +12,12 @@ function boxCreate(){
 let deleteBox = document.querySelector('#deleteBox');
 
 deleteBox.addEventListener('click',()=>{
-  boxAdd.removeChild(boxAdd.lastChild)
+  console.log(boxAdd.childElementCount)
+  if(boxAdd.childElementCount != 0){
+    boxAdd.removeChild(boxAdd.lastChild);
+  } else {
+    return alert('없앨 박스가 더이상 없습니다.');
+  }
 })
 
 

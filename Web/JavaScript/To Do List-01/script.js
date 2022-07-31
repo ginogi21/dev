@@ -11,7 +11,7 @@ myButton.addEventListener('click', (e)=> {
     list.appendChild(myLi);
     //Create span
     const mySpan = document.createElement('span');
-    mySpan.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    mySpan.innerHTML = '<i class="fas fa-check"></i><i class="fas fa-trash-alt"></i>';
     myLi.appendChild(mySpan);
   }
   const close = document.querySelectorAll('span');
